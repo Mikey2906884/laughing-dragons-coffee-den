@@ -1,0 +1,30 @@
+header {
+  background-color: #38220f;
+  display: flex;
+  color: #ece0d1;
+  font-family: "Rubik Moonrocks", serif;
+  padding: 5px;
+}
+
+.logo {
+  background-image: url("../images/The\ Laughing\ Dragon.png");
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.letters {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px;
+  gap: 10px;
+}
+
+.laughing-dragons,
+.coffee-den {
+  display: flex;
+  font-size: xx-large;
+  gap: 5px;
+}
