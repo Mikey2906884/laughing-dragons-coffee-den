@@ -1,30 +1,140 @@
-header {
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  position: relative;
   background-color: #38220f;
   display: flex;
+  height: 720px;
   color: #ece0d1;
   font-family: "Rubik Moonrocks", serif;
   padding: 5px;
+  z-index: -5;
+  --mask: radial-gradient(
+        223.61px at 50% calc(100% - 300px),
+        #000 99%,
+        #0000 101%
+      )
+      calc(50% - 200px) 0/400px 100%,
+    radial-gradient(223.61px at 50% calc(100% + 200px), #0000 99%, #000 101%)
+      50% calc(100% - 100px) / 400px 100% repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
 }
 
-.logo {
-  background-image: url("../images/The\ Laughing\ Dragon.png");
-  width: 100px;
-  height: 100px;
-  background-size: cover;
-  background-repeat: no-repeat;
+.tagline {
+  display: flex;
+  flex-direction: column;
+  font-size: 50px;
+  padding-top: 50px;
+  gap: 10px;
+}
+
+.laughing-over-lattes,
+.a-brew-tiful {
+  display: flex;
+  gap: 5px;
+}
+
+.blobs-glass {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(100px);
+  z-index: -1;
+}
+
+.blob {
+  position: absolute;
+  height: 30%;
+  top: 0;
+  left: 0;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.blob-dark {
+  background: #624832;
+  z-index: -4;
+}
+
+.blob-light {
+  background: #977359;
+  z-index: -3;
+}
+
+.blob-lighter {
+  background: #dbc2ad;
+  z-index: -2;
 }
 
 .letters {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 5px;
+  justify-content: flex-start;
+  padding: 20px;
   gap: 10px;
 }
 
 .laughing-dragons,
 .coffee-den {
   display: flex;
-  font-size: xx-large;
+  font-size: 100px;
   gap: 5px;
+}
+
+.cup-of-coffee {
+  position: absolute;
+  top: 150px;
+  left: calc(100% - 600px);
+  z-index: 5;
+}
+
+.platter {
+  position: absolute;
+  background-image: url("../images/platter.png");
+  width: 600px;
+  height: 600px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.cup {
+  position: absolute;
+  top: -70px;
+  left: 10px;
+}
+
+.upper {
+  position: absolute;
+  background-image: url("../images/upper-cup.png");
+  width: 600px;
+  height: 600px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.lower {
+  position: absolute;
+  background-image: url("../images/bottom-cup.png");
+  width: 600px;
+  height: 600px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  position: absolute;
+  top: 35%;
+  left: 33%;
+  background-image: url("../images/The\ Laughing\ Dragon.png");
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
