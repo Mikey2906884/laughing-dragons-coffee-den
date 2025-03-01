@@ -136,3 +136,42 @@
     opacity: 1;
   }
 }
+
+@media (max-width: 769px) {
+  .family-photo {
+    animation: family-photo-changer 10s alternate ease-in-out infinite;
+  }
+  .shop-photo {
+    animation: shop-photo-changer 10s alternate ease-in-out infinite;
+  }
+
+  @keyframes family-photo-changer {
+    0% {
+      background-image: url("../images/base images/happy\ couple.jpeg");
+    }
+    100% {
+      background-image: url("../images/base images/happy\ couple\ D&D.jpg");
+    }
+    50% {
+      background-image: url("../images/base images/happy\ couple.jpeg");
+    }
+    0% {
+      background-image: url("../images/base images/happy\ couple.jpeg");
+    }
+  }
+
+  @keyframes shop-photo-changer {
+    0% {
+      background-image: url("../images/base images/D&D\ IRL.jpg");
+    }
+    100% {
+      background-image: url("../images/base images/Tavern\ in\ D&D.jpeg");
+    }
+    50% {
+      background-image: url("../images/base images/D&D\ IRL.jpg");
+    }
+    0% {
+      background-image: url("../images/base images/D&D\ IRL.jpg");
+    }
+  }
+}

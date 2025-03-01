@@ -15,21 +15,50 @@ body {
   }
 }
 
+nav {
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 2000px;
+  height: 10rem;
+  background-color: #ece0d1;
+  font-size: xx-large;
+  z-index: 1;
+}
+
+nav a {
+  color: #624832;
+  padding: 10px;
+  height: 50%;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+[aria-controls="nav-list"] {
+  display: none;
+  background-color: transparent;
+  color: #624832;
+  border: none;
+  font-size: xx-large;
+  height: fit-content;
+}
+
 .hero {
   position: relative;
   background-color: #38220f;
   color: #ece0d1;
   font-family: "Rubik Moonrocks", serif;
-  height: 650px;
-  padding: 5px;
-  mask: radial-gradient(
-        178.89px at 50% calc(100% - 240px),
-        #000 99%,
-        #0000 101%
-      )
+  height: 700px;
+  padding: 10rem 5px 5px 5px;
+}
+
+.hero,
+nav {
+  mask: radial-gradient(180px at 50% calc(100% - 240px), #000 100%, #0000 100%)
       calc(50% - 160px) 0/320px 100%,
-    radial-gradient(178.89px at 50% calc(100% + 160px), #0000 99%, #000 101%)
-      50% calc(100% - 80px) / 320px 100% repeat-x;
+    radial-gradient(180px at 50% calc(100% + 160px), #0000 100%, #000 100%) 50%
+      calc(100% - 80px) / 320px 100% repeat-x;
 }
 
 .shop-name {
@@ -97,22 +126,23 @@ body {
 
 .cup-of-coffee {
   position: absolute;
-  background-image: url("../images/laughing-dragon-mug.png");
+  background-image: url("../images/base images/laughing-dragon-mug.png");
   background-size: contain;
   background-repeat: no-repeat;
   width: 30rem;
   aspect-ratio: 1;
-  top: 100px;
+  top: 250px;
   right: 5%;
 }
 
 .about-us {
+  padding-top: 5rem;
   font-size: xx-large;
   color: #ece0d1;
 }
 
-.about-us h2,
-.about-us h3 {
+h2,
+h3 {
   text-align: center;
 }
 
@@ -133,21 +163,135 @@ body {
 }
 
 .family-photo {
-  background-image: url("../images/happy\ couple.jpeg");
+  background-image: url("../images/base images/happy\ couple.jpeg");
 }
 
 .shop-photo {
-  background-image: url("../images/cozy\ coffee\ shop.jpg");
+  background-image: url("../images/base images/D&D\ IRL.jpg");
 }
 
 .family-photo,
 .shop-photo {
   background-size: cover;
   background-repeat: no-repeat;
-  width: 200rem;
+  width: 200em;
   min-height: 30rem;
   border-radius: 50%;
   box-shadow: inset 0px 0px 30px 30px #dbc2ad;
+  transition: all 1s;
+}
+
+.menu {
+  padding: 10rem 5px;
+  font-size: xx-large;
+  color: #977359;
+  background-color: #ece0d1;
+  mask: radial-gradient(180px at 50% 240px, #000 100%, #0000 100%)
+      calc(50% - 160px) 0/320px 50% repeat-x,
+    radial-gradient(180px at 50% -160px, #0000 100%, #000 100%) 50% 80px/320px
+      calc(50% - 80px) repeat-x,
+    radial-gradient(180px at 50% calc(100% - 240px), #000 100%, #0000 100%)
+      calc(50% - 160px) 100%/320px 50% repeat-x,
+    radial-gradient(180px at 50% calc(100% + 160px), #0000 100%, #000 100%) 50%
+      calc(100% - 80px) / 320px calc(50% - 80px) repeat-x;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin-bottom: 60px;
+}
+
+.card > div {
+  box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.card-image {
+  width: 400px;
+  height: 250px;
+}
+
+.card-image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.card-text {
+  margin: -20px auto;
+  margin-bottom: -35px;
+  height: 300px;
+  width: 300px;
+  background-color: #38220f;
+  color: #ece0d1;
+  padding: 20px;
+}
+
+.card-meal-type {
+  font-style: italic;
+}
+
+.card-title {
+  font-size: 1.9rem;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  transition: all 0.75s;
+}
+
+.card-body {
+  font-size: 1.25rem;
+  text-align: justify;
+  transition: color 1.5s;
+}
+
+.card-price {
+  width: 100px;
+  height: 100px;
+  background-color: #624832;
+  color: #ece0d1;
+  margin-left: auto;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 769px) {
+  nav a:hover {
+    background-color: #624832;
+    color: #ece0d1;
+  }
+
+  .family-photo:hover {
+    background-image: url("../images/base images/happy\ couple\ D&D.jpg");
+  }
+
+  .shop-photo:hover {
+    background-image: url("../images/base images/Tavern\ in\ D&D.jpeg");
+  }
+
+  .card-body {
+    color: transparent;
+  }
+
+  .card:hover {
+    .card-title {
+      font-size: 0;
+      margin: 0;
+    }
+    .card-body {
+      color: #ece0d1;
+    }
+  }
 }
 
 @media (max-width: 1439px) {
@@ -168,16 +312,18 @@ body {
 
   .cup-of-coffee {
     width: 25rem;
-    top: 180px;
+    top: 350px;
     right: calc(50% - 12.5rem);
-  }
-
-  .about-us {
-    font-size: large;
   }
 }
 
 @media (max-width: 979px) {
+  nav {
+    font-size: large;
+    justify-content: center;
+    height: 9rem;
+  }
+
   .shop-name {
     font-size: 30px;
   }
@@ -207,6 +353,15 @@ body {
 }
 
 @media (max-width: 624px) {
+  nav {
+    font-size: small;
+    height: 8rem;
+  }
+
+  .hero {
+    padding: 5rem 5px 5px 5px;
+  }
+
   .shop-name {
     padding-top: 0;
     flex-direction: column;
@@ -222,7 +377,7 @@ body {
 
   .cup-of-coffee {
     width: 18rem;
-    top: 200px;
+    top: 300px;
     right: calc(50% - 9rem);
   }
 
@@ -238,5 +393,59 @@ body {
   .shop-photo {
     min-height: 0;
     aspect-ratio: 1;
+  }
+
+  .container {
+    padding: 20px 10px;
+  }
+
+  .card {
+    width: 200px;
+    margin-bottom: 30px;
+  }
+
+  .card-image {
+    width: 200px;
+    height: 125px;
+  }
+
+  .card-text {
+    margin: -10px auto;
+    margin-bottom: -17.5px;
+    height: 150px;
+    width: 150px;
+    padding: 10px;
+  }
+
+  .card-title,
+  .card-meal-type {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    margin-top: 2.5px;
+  }
+
+  .card-body {
+    font-size: 0.625rem;
+  }
+
+  .card-price {
+    width: 50px;
+    height: 50px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 424px) {
+  nav {
+    justify-content: flex-end;
+  }
+
+  nav a {
+    display: none;
+  }
+
+  [aria-controls="nav-list"] {
+    display: block;
+    padding: 0 10px;
   }
 }
