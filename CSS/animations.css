@@ -147,31 +147,31 @@
 
   @keyframes family-photo-changer {
     0% {
-      background-image: url("../images/base images/happy\ couple.jpeg");
+      background-image: url("../images/base-images/happy-couple.jpeg");
     }
     100% {
-      background-image: url("../images/base images/happy\ couple\ D&D.jpg");
+      background-image: url("../images/base-images/happy-couple-DND.jpg");
     }
     50% {
-      background-image: url("../images/base images/happy\ couple.jpeg");
+      background-image: url("../images/base-images/happy-couple.jpeg");
     }
     0% {
-      background-image: url("../images/base images/happy\ couple.jpeg");
+      background-image: url("../images/base-images/happy-couple.jpeg");
     }
   }
 
   @keyframes shop-photo-changer {
     0% {
-      background-image: url("../images/base images/D&D\ IRL.jpg");
+      background-image: url("../images/base-images/DND-IRL.jpg");
     }
     100% {
-      background-image: url("../images/base images/Tavern\ in\ D&D.jpeg");
+      background-image: url("../images/base-images/tavern-in-DND.jpeg");
     }
     50% {
-      background-image: url("../images/base images/D&D\ IRL.jpg");
+      background-image: url("../images/base-images/DND-IRL.jpg");
     }
     0% {
-      background-image: url("../images/base images/D&D\ IRL.jpg");
+      background-image: url("../images/base-images/DND-IRL.jpg");
     }
   }
 }

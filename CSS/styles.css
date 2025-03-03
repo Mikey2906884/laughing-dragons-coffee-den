@@ -126,7 +126,7 @@ nav {
 
 .cup-of-coffee {
   position: absolute;
-  background-image: url("../images/base images/laughing-dragon-mug.png");
+  background-image: url("../images/base-images/laughing-dragon-mug.png");
   background-size: contain;
   background-repeat: no-repeat;
   width: 30rem;
@@ -135,7 +135,8 @@ nav {
   right: 5%;
 }
 
-.about-us {
+.about-us,
+.specials {
   padding-top: 5rem;
   font-size: xx-large;
   color: #ece0d1;
@@ -163,11 +164,11 @@ h3 {
 }
 
 .family-photo {
-  background-image: url("../images/base images/happy\ couple.jpeg");
+  background-image: url("../images/base-images/happy-couple.jpeg");
 }
 
 .shop-photo {
-  background-image: url("../images/base images/D&D\ IRL.jpg");
+  background-image: url("../images/base-images/DND-IRL.jpg");
 }
 
 .family-photo,
@@ -184,7 +185,7 @@ h3 {
 .menu {
   padding: 10rem 5px;
   font-size: xx-large;
-  color: #977359;
+  color: #38220f;
   background-color: #ece0d1;
   mask: radial-gradient(180px at 50% 240px, #000 100%, #0000 100%)
       calc(50% - 160px) 0/320px 50% repeat-x,
@@ -210,8 +211,10 @@ h3 {
   margin-bottom: 60px;
 }
 
-.card > div {
+.card div,
+.card-image img {
   box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
 }
 
 .card-image {
@@ -219,7 +222,7 @@ h3 {
   height: 250px;
 }
 
-.card-image > img {
+.card-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -250,7 +253,7 @@ h3 {
 .card-body {
   font-size: 1.25rem;
   text-align: justify;
-  transition: color 1.5s;
+  transition: all 1.5s;
 }
 
 .card-price {
@@ -265,8 +268,91 @@ h3 {
   align-items: center;
 }
 
+.combos .card-image {
+  display: flex;
+}
+
+.combos .card-image img {
+  width: 50%;
+}
+
 .combos .card-price {
   width: 250px;
+}
+
+.specials {
+  color: #dbc2ad;
+  font-size: xx-large;
+}
+
+.special,
+.special-container,
+.special-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.special,
+.special-container {
+  align-items: center;
+  justify-content: center;
+}
+
+.special-container,
+.special-card {
+  position: relative;
+  padding: 20px;
+}
+
+.special-card,
+.special-image,
+.special-card .card-price {
+  box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.special-card {
+  width: 70rem;
+  height: 20rem;
+  background-color: #dbc2ad;
+  margin: 120px 10px;
+  border-radius: 10px;
+  transition: 0.5s ease-in-out;
+}
+
+.special-image {
+  position: relative;
+  width: 400px;
+  height: 250px;
+  top: -40%;
+}
+
+.special-image img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.special-content {
+  position: relative;
+  top: -140px;
+  padding: 10px 15px;
+  color: #624832;
+  text-align: center;
+}
+
+.special-content p {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.special-card .card-price {
+  color: #dbc2ad;
+  background-color: #38220f;
+  position: absolute;
+  top: 90%;
+  right: -30px;
+  border-radius: 10px;
+  transition: 0.5s ease-in-out;
 }
 
 @media (min-width: 769px) {
@@ -276,25 +362,35 @@ h3 {
   }
 
   .family-photo:hover {
-    background-image: url("../images/base images/happy\ couple\ D&D.jpg");
+    background-image: url("../images/base-images/happy-couple-DND.jpg");
   }
 
   .shop-photo:hover {
-    background-image: url("../images/base images/Tavern\ in\ D&D.jpeg");
+    background-image: url("../images/base-images/tavern-in-DND.jpeg");
   }
 
   .card-body {
     color: transparent;
   }
 
-  .card:hover {
-    .card-title {
-      font-size: 0;
-      margin: 0;
-    }
-    .card-body {
-      color: #ece0d1;
-    }
+  .card:hover .card-title {
+    font-size: 0;
+    margin: 0;
+  }
+
+  .card:hover .card-body {
+    color: #ece0d1;
+  }
+
+  .special-card:hover {
+    height: 30rem;
+  }
+
+  .special-card:hover .special-content p {
+    margin-top: 30px;
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.2s;
   }
 }
 
