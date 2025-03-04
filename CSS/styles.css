@@ -185,8 +185,6 @@ h3 {
 .menu {
   padding: 10rem 5px;
   font-size: xx-large;
-  color: #38220f;
-  background-color: #ece0d1;
   mask: radial-gradient(180px at 50% 240px, #000 100%, #0000 100%)
       calc(50% - 160px) 0/320px 50% repeat-x,
     radial-gradient(180px at 50% -160px, #0000 100%, #000 100%) 50% 80px/320px
@@ -195,6 +193,11 @@ h3 {
       calc(50% - 160px) 100%/320px 50% repeat-x,
     radial-gradient(180px at 50% calc(100% + 160px), #0000 100%, #000 100%) 50%
       calc(100% - 80px) / 320px calc(50% - 80px) repeat-x;
+}
+
+.menu {
+  color: #38220f;
+  background-color: #ece0d1;
 }
 
 .container {
@@ -226,10 +229,9 @@ h3 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: bottom;
 }
 
-.card-text {
+.card-content {
   margin: -20px auto;
   margin-bottom: -35px;
   height: 300px;
@@ -285,6 +287,10 @@ h3 {
   font-size: xx-large;
 }
 
+.specials h2 {
+  margin-bottom: 75px;
+}
+
 .special,
 .special-container,
 .special-card {
@@ -311,8 +317,8 @@ h3 {
 }
 
 .special-card {
-  width: 70rem;
-  height: 20rem;
+  width: 70%;
+  height: 30rem;
   background-color: #dbc2ad;
   margin: 120px 10px;
   border-radius: 10px;
@@ -324,10 +330,12 @@ h3 {
   width: 400px;
   height: 250px;
   top: -40%;
+  border-radius: 10px;
 }
 
 .special-image img {
-  max-width: 100%;
+  width: 400px;
+  max-height: 100%;
   border-radius: 10px;
 }
 
@@ -340,8 +348,8 @@ h3 {
 }
 
 .special-content p {
-  visibility: hidden;
-  opacity: 0;
+  visibility: visible;
+  opacity: 1;
   transition: 0.3s ease-in-out;
 }
 
@@ -355,7 +363,126 @@ h3 {
   transition: 0.5s ease-in-out;
 }
 
-@media (min-width: 769px) {
+.contact-us {
+  font-size: xx-large;
+  padding: 10rem 0 0;
+  background-color: #38220f;
+  color: #ece0d1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-us-container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-message {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+  width: 45%;
+}
+
+.contact-message h2 {
+  margin-top: 0;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form {
+  background-color: rgba(236, 224, 209, 0.5);
+  box-shadow: inset 0px 0px 20px 20px rgb(236, 224, 209, 0.5);
+  text-shadow: 1px 1px 2px rgb(236, 224, 209, 0.5),
+    0 0 1em rgb(236, 224, 209, 0.5), 0 0 0.2em rgb(236, 224, 209, 0.5);
+  color: #38220f;
+  margin: 20px;
+  padding: 20px;
+  width: 45%;
+  border-radius: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+
+.name-input-container {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+
+.name {
+  flex: 1;
+}
+
+.phone-input-container {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+
+.phone-input-container .phone:nth-child(1),
+.phone-input-container .phone:nth-child(3) {
+  flex: 0.5;
+}
+
+.phone-input-container .phone:nth-child(5) {
+  flex: 1;
+}
+
+input {
+  font-size: x-large;
+  height: 2rem;
+  border: none;
+  color: #38220f;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px rgb(236, 224, 209, 0.5),
+    0 0 1em rgb(236, 224, 209, 0.5), 0 0 0.2em rgb(236, 224, 209, 0.5);
+}
+
+input[type="submit"] {
+  background-color: #38220f;
+  color: #ece0d1;
+  width: 50%;
+  height: 4rem;
+  margin-top: 20px;
+}
+
+.form-submit {
+  align-items: center;
+}
+
+textarea {
+  font-size: x-large;
+  border-radius: 10px;
+  height: 8rem;
+  resize: none;
+  border: none;
+  box-shadow: 1px 1px 2px rgb(236, 224, 209, 0.5),
+    0 0 1em rgb(236, 224, 209, 0.5), 0 0 0.2em rgb(236, 224, 209, 0.5);
+}
+
+@media (min-width: 1025px) {
   nav a:hover {
     background-color: #624832;
     color: #ece0d1;
@@ -380,6 +507,15 @@ h3 {
 
   .card:hover .card-body {
     color: #ece0d1;
+  }
+
+  .special-card {
+    height: 20rem;
+  }
+
+  .special-card .special-content p {
+    visibility: hidden;
+    opacity: 0;
   }
 
   .special-card:hover {
@@ -415,6 +551,10 @@ h3 {
     top: 350px;
     right: calc(50% - 12.5rem);
   }
+
+  .contact-info {
+    font-size: 22px;
+  }
 }
 
 @media (max-width: 979px) {
@@ -449,6 +589,27 @@ h3 {
   .shop-photo {
     width: 100%;
     border-radius: 20%;
+  }
+
+  .specials {
+    font-size: x-large;
+  }
+
+  .contact-us-container {
+    flex-direction: column;
+  }
+
+  .contact-message {
+    align-items: center;
+  }
+
+  .contact-message,
+  .contact-form {
+    width: 100%;
+  }
+
+  .contact-info {
+    width: fit-content;
   }
 }
 
@@ -509,7 +670,7 @@ h3 {
     height: 125px;
   }
 
-  .card-text {
+  .card-content {
     margin: -10px auto;
     margin-bottom: -17.5px;
     height: 150px;
@@ -537,6 +698,36 @@ h3 {
   .combos .card-price {
     width: 125px;
   }
+
+  .special-image {
+    width: 200px;
+    height: 125px;
+  }
+
+  .special-container,
+  .special-card {
+    padding: 10px;
+  }
+
+  .special-card {
+    height: 15rem;
+    margin: 60px 5px;
+  }
+
+  .special-image img {
+    width: 200px;
+    max-height: 100%;
+  }
+
+  .special-content {
+    font-size: small;
+    top: -70px;
+    padding: 5px 7.5px;
+  }
+
+  .special-card .card-price {
+    right: -15px;
+  }
 }
 
 @media (max-width: 424px) {
@@ -551,5 +742,19 @@ h3 {
   [aria-controls="nav-list"] {
     display: block;
     padding: 0 10px;
+  }
+
+  .special-content {
+    font-size: x-small;
+  }
+
+  .contact-us-container {
+    font-size: small;
+  }
+
+  .contact-info,
+  form input,
+  form textarea {
+    font-size: smaller;
   }
 }

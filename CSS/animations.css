@@ -137,7 +137,7 @@
   }
 }
 
-@media (max-width: 769px) {
+@media (max-width: 1024px) {
   .family-photo {
     animation: family-photo-changer 10s alternate ease-in-out infinite;
   }
