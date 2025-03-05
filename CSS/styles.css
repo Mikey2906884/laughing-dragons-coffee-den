@@ -569,69 +569,12 @@ input[type="submit"] {
 textarea {
   font-size: x-large;
   border-radius: 10px;
+  color: #38220f;
   height: 8rem;
   resize: none;
   border: none;
   box-shadow: 1px 1px 2px rgb(236, 224, 209, 0.5),
     0 0 1em rgb(236, 224, 209, 0.5), 0 0 0.2em rgb(236, 224, 209, 0.5);
-}
-
-@media (min-width: 1025px) {
-  nav a:hover {
-    background-color: #624832;
-    color: #ece0d1;
-  }
-
-  .family-photo:hover {
-    background-image: url("../images/base-images/happy-couple-DND.jpg");
-  }
-
-  .shop-photo:hover {
-    background-image: url("../images/base-images/tavern-in-DND.jpeg");
-  }
-
-  .card-body {
-    color: transparent;
-  }
-
-  .card:hover .card-title {
-    font-size: 0;
-    margin: 0;
-  }
-
-  .card:hover .card-body {
-    color: #ece0d1;
-  }
-
-  .special-card {
-    height: 20rem;
-  }
-
-  .special-card .special-content p {
-    visibility: hidden;
-    opacity: 0;
-  }
-
-  .special-card:hover {
-    height: 30rem;
-  }
-
-  .special-card:hover .special-content p {
-    margin-top: 30px;
-    visibility: visible;
-    opacity: 1;
-    transition-delay: 0.2s;
-  }
-
-  .event-card-image {
-    left: 30%;
-    width: 70%;
-  }
-
-  .event-card:hover .event-card-image {
-    left: 0;
-    width: 35%;
-  }
 }
 
 @media (max-width: 1439px) {
