@@ -136,7 +136,8 @@ nav {
 }
 
 .about-us,
-.specials {
+.specials,
+.fan-art {
   padding-top: 5rem;
   font-size: xx-large;
   color: #ece0d1;
@@ -182,7 +183,10 @@ h3 {
   transition: all 1s;
 }
 
-.menu {
+.menu,
+.events {
+  color: #38220f;
+  background-color: #ece0d1;
   padding: 10rem 5px;
   font-size: xx-large;
   mask: radial-gradient(180px at 50% 240px, #000 100%, #0000 100%)
@@ -193,11 +197,6 @@ h3 {
       calc(50% - 160px) 100%/320px 50% repeat-x,
     radial-gradient(180px at 50% calc(100% + 160px), #0000 100%, #000 100%) 50%
       calc(100% - 80px) / 320px calc(50% - 80px) repeat-x;
-}
-
-.menu {
-  color: #38220f;
-  background-color: #ece0d1;
 }
 
 .container {
@@ -282,11 +281,6 @@ h3 {
   width: 250px;
 }
 
-.specials {
-  color: #dbc2ad;
-  font-size: xx-large;
-}
-
 .specials h2 {
   margin-bottom: 75px;
 }
@@ -363,14 +357,114 @@ h3 {
   transition: 0.5s ease-in-out;
 }
 
+.events-container {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  align-items: center;
+  width: 100%;
+}
+
+.event-card {
+  position: relative;
+  width: 70%;
+  height: 30rem;
+  background-color: #624832;
+  color: #dbc2ad;
+  border-radius: 20px;
+  box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.event-cover {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.event-titles {
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.event-titles .event-name {
+  font-size: x-large;
+}
+
+.event-card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 35%;
+  height: 100%;
+  border-radius: 20px;
+  transition: all 1s ease-in-out;
+  box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.event-card-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.event-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  padding: 20px 30px;
+}
+
+.fan-art {
+  font-size: xx-large;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 10rem;
+}
+
+.art {
+  width: 50%;
+  height: 40rem;
+  border-radius: 20px;
+  text-align: right;
+}
+
+.art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
 .contact-us {
   font-size: xx-large;
-  padding: 10rem 0 0;
+  padding-top: 10rem;
   background-color: #38220f;
   color: #ece0d1;
   display: flex;
   justify-content: center;
   align-items: center;
+  mask: radial-gradient(180px at 50% 240px, #000 100%, #0000 100%)
+      calc(50% - 160px) 0/320px 100%,
+    radial-gradient(180px at 50% -160px, #0000 100%, #000 100%) 50% 80px/320px
+      100% repeat-x;
 }
 
 .contact-us-container {
@@ -528,6 +622,16 @@ textarea {
     opacity: 1;
     transition-delay: 0.2s;
   }
+
+  .event-card-image {
+    left: 30%;
+    width: 70%;
+  }
+
+  .event-card:hover .event-card-image {
+    left: 0;
+    width: 35%;
+  }
 }
 
 @media (max-width: 1439px) {
@@ -550,6 +654,18 @@ textarea {
     width: 25rem;
     top: 350px;
     right: calc(50% - 12.5rem);
+  }
+
+  .event-card {
+    font-size: x-large;
+  }
+
+  .event-card .event-content {
+    padding: 0 20px;
+  }
+
+  .art {
+    height: 30rem;
   }
 
   .contact-info {
@@ -610,6 +726,16 @@ textarea {
 
   .contact-info {
     width: fit-content;
+  }
+
+  .art {
+    height: 15rem;
+    font-size: large;
+  }
+
+  .event-card {
+    height: 15rem;
+    font-size: small;
   }
 }
 
@@ -728,6 +854,15 @@ textarea {
   .special-card .card-price {
     right: -15px;
   }
+
+  .event-card,
+  .event-titles .event-name {
+    font-size: x-small;
+  }
+
+  .event-card .event-content {
+    padding: 0 10px;
+  }
 }
 
 @media (max-width: 424px) {
@@ -756,5 +891,15 @@ textarea {
   form input,
   form textarea {
     font-size: smaller;
+  }
+
+  .event-card {
+    height: 10rem;
+    font-size: xx-small;
+  }
+
+  .art {
+    height: 10rem;
+    font-size: x-small;
   }
 }
